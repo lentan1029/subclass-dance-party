@@ -9,6 +9,9 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   dancer.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
+    // if (timeBetweenSteps >= 1000) {
+    //   timeBetweenSteps = 999;
+    // }
     setTimeout(dancer.step, timeBetweenSteps);
   };
   dancer.step();
