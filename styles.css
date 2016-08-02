@@ -2,6 +2,8 @@ body, html{
   height:100%;
 }
 body{
+  background: url('./background.jpg');
+  overflow: hidden;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
@@ -27,5 +29,5 @@ body, a:link, a:visited, a:active{
 }
 
 .dancer.moving {
-  border: 60px solid blue;
+  border: 0px;
 }
