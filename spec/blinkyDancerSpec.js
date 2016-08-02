@@ -5,7 +5,8 @@ describe('blinkyDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blinkyDancer = makeBlinkyDancer(10, 20, timeBetweenSteps);
+    // blinkyDancer = makeBlinkyDancer(10, 20, timeBetweenSteps);
+    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
@@ -26,13 +27,11 @@ describe('blinkyDancer', function() {
       // console.log(blinkyDancer);
       // console.log(sinon.spy.called);
       // console.log(sinon.spy.callCount);
-      // debugger;
+       // debugger;
       expect(blinkyDancer.step.callCount).to.be.equal(0);
-      blinkyDancer = makeBlinkyDancer(10, 20, timeBetweenSteps);
+      blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
       sinon.spy(blinkyDancer, 'step');
-      debugger;
-      clock.tick(timeBetweenSteps * 2);
-
+      clock.tick(timeBetweenSteps); //the first time it's called, it calls the superclass's method
 
       expect(blinkyDancer.step.callCount).to.be.equal(1);
 

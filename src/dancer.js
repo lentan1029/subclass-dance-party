@@ -12,7 +12,11 @@ var makeDancer = function(top, left, timeBetweenSteps) {
     // if (timeBetweenSteps >= 1000) {
     //   timeBetweenSteps = 999;
     // }
-    setTimeout(dancer.step, timeBetweenSteps);
+    // setTimeout(dancer.step, timeBetweenSteps);
+
+    setTimeout(function() {
+      return dancer.step();
+    }, timeBetweenSteps);
   };
   dancer.step();
 
@@ -33,3 +37,5 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   return dancer;
 };
+
+
