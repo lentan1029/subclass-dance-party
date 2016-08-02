@@ -31,3 +31,10 @@ body, a:link, a:visited, a:active{
 .dancer.moving {
   border: 0px;
 }
+
+#blackhole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}

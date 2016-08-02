@@ -14,6 +14,13 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="MovingDancer">add a moving dancer</a>        
     </div>
+    <div id="blackhole">BLACKHOLE</div>
     <script src="src/init.js"></script>
+    <script>
+      $('body').click( function(e) {
+        xpos = e.pageX;
+        ypos = e.pageY;
+      });
+    </script>
   </body>
 </html>
