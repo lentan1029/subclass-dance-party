@@ -4,7 +4,7 @@ var MovingDancer = function(top, left, timeBetweenSteps) {
   var color = colors[Math.floor(Math.random() * 3)];
   // console.log(color);
   // console.log('<span class="dancer moving"><img src="./' + color + 'mobius.png"></img></span>');
-  this.$node = $('<span class="dancer moving"><img src="./' + color + 'mobius.png"></img></span>');
+  this.$node = $('<div class="dancer moving"><img src="./' + color + 'mobius.png"></img></div>');
   this.$node.addClass('moving');
   this.horizontalSpeed = Math.random() * 10 + 5;
   this.verticalSpeed = Math.random() * 10 + 5;
